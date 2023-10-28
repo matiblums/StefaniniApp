@@ -81,14 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED27082D2AED523D00BA9680 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ED2708332AED529900BA9680 /* Utilities */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		ED27082E2AED524200BA9680 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,13 +124,6 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		ED2708332AED529900BA9680 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		EDE000772AED3E9C007911EF = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +151,6 @@
 				ED2708302AED524A00BA9680 /* Model */,
 				ED27082F2AED524600BA9680 /* View */,
 				ED27082E2AED524200BA9680 /* ViewModel */,
-				ED27082D2AED523D00BA9680 /* Extensions */,
 				EDE000872AED3E9E007911EF /* Assets.xcassets */,
 				EDE000892AED3E9E007911EF /* Preview Content */,
 			);
