@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED2708362AED53E400BA9680 /* CatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2708352AED53E400BA9680 /* CatImage.swift */; };
+		ED2708382AED53F200BA9680 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2708372AED53F200BA9680 /* APIManager.swift */; };
+		ED27083A2AED542900BA9680 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2708392AED542900BA9680 /* GalleryViewModel.swift */; };
+		ED27083C2AED544D00BA9680 /* CatImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27083B2AED544D00BA9680 /* CatImageCell.swift */; };
+		ED27083E2AED547B00BA9680 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27083D2AED547B00BA9680 /* GalleryViewController.swift */; };
+		ED2708402AED54C800BA9680 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27083F2AED54C800BA9680 /* GridView.swift */; };
+		EDE000842AED3E9C007911EF /* StefaniniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE000832AED3E9C007911EF /* StefaniniApp.swift */; };
+		EDE000882AED3E9E007911EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE000872AED3E9E007911EF /* Assets.xcassets */; };
+		EDE0008B2AED3E9E007911EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE0008A2AED3E9E007911EF /* Preview Assets.xcassets */; };
+		EDE000952AED3E9E007911EF /* StefaniniAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE000942AED3E9E007911EF /* StefaniniAppTests.swift */; };
+		EDE0009F2AED3E9E007911EF /* StefaniniAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0009E2AED3E9E007911EF /* StefaniniAppUITests.swift */; };
+		EDE000A12AED3E9E007911EF /* StefaniniAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE000A02AED3E9E007911EF /* StefaniniAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDE000912AED3E9E007911EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE000782AED3E9C007911EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE0007F2AED3E9C007911EF;
+			remoteInfo = StefaniniApp;
+		};
+		EDE0009B2AED3E9E007911EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE000782AED3E9C007911EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE0007F2AED3E9C007911EF;
+			remoteInfo = StefaniniApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED2708352AED53E400BA9680 /* CatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImage.swift; sourceTree = "<group>"; };
+		ED2708372AED53F200BA9680 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		ED2708392AED542900BA9680 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		ED27083B2AED544D00BA9680 /* CatImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageCell.swift; sourceTree = "<group>"; };
+		ED27083D2AED547B00BA9680 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		ED27083F2AED54C800BA9680 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		EDE000802AED3E9C007911EF /* Stefanini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stefanini.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE000832AED3E9C007911EF /* StefaniniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StefaniniApp.swift; sourceTree = "<group>"; };
+		EDE000872AED3E9E007911EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDE0008A2AED3E9E007911EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDE000902AED3E9E007911EF /* StefaniniTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StefaniniTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE000942AED3E9E007911EF /* StefaniniAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StefaniniAppTests.swift; sourceTree = "<group>"; };
+		EDE0009A2AED3E9E007911EF /* StefaniniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StefaniniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE0009E2AED3E9E007911EF /* StefaniniAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StefaniniAppUITests.swift; sourceTree = "<group>"; };
+		EDE000A02AED3E9E007911EF /* StefaniniAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StefaniniAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDE0007D2AED3E9C007911EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE0008D2AED3E9E007911EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE000972AED3E9E007911EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED27082D2AED523D00BA9680 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED2708332AED529900BA9680 /* Utilities */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ED27082E2AED524200BA9680 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED2708392AED542900BA9680 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED27082F2AED524600BA9680 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED27083D2AED547B00BA9680 /* GalleryViewController.swift */,
+				ED27083F2AED54C800BA9680 /* GridView.swift */,
+				ED27083B2AED544D00BA9680 /* CatImageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED2708302AED524A00BA9680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED2708322AED527000BA9680 /* API */,
+				ED2708312AED526C00BA9680 /* Entities */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED2708312AED526C00BA9680 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ED2708352AED53E400BA9680 /* CatImage.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		ED2708322AED527000BA9680 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ED2708372AED53F200BA9680 /* APIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ED2708332AED529900BA9680 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EDE000772AED3E9C007911EF = {
+			isa = PBXGroup;
+			children = (
+				EDE000822AED3E9C007911EF /* StefaniniApp */,
+				EDE000932AED3E9E007911EF /* StefaniniAppTests */,
+				EDE0009D2AED3E9E007911EF /* StefaniniAppUITests */,
+				EDE000812AED3E9C007911EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDE000812AED3E9C007911EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDE000802AED3E9C007911EF /* Stefanini.app */,
+				EDE000902AED3E9E007911EF /* StefaniniTests.xctest */,
+				EDE0009A2AED3E9E007911EF /* StefaniniUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDE000822AED3E9C007911EF /* StefaniniApp */ = {
+			isa = PBXGroup;
+			children = (
+				EDE000832AED3E9C007911EF /* StefaniniApp.swift */,
+				ED2708302AED524A00BA9680 /* Model */,
+				ED27082F2AED524600BA9680 /* View */,
+				ED27082E2AED524200BA9680 /* ViewModel */,
+				ED27082D2AED523D00BA9680 /* Extensions */,
+				EDE000872AED3E9E007911EF /* Assets.xcassets */,
+				EDE000892AED3E9E007911EF /* Preview Content */,
+			);
+			path = StefaniniApp;
+			sourceTree = "<group>";
+		};
+		EDE000892AED3E9E007911EF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDE0008A2AED3E9E007911EF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDE000932AED3E9E007911EF /* StefaniniAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE000942AED3E9E007911EF /* StefaniniAppTests.swift */,
+			);
+			path = StefaniniAppTests;
+			sourceTree = "<group>";
+		};
+		EDE0009D2AED3E9E007911EF /* StefaniniAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE0009E2AED3E9E007911EF /* StefaniniAppUITests.swift */,
+				EDE000A02AED3E9E007911EF /* StefaniniAppUITestsLaunchTests.swift */,
+			);
+			path = StefaniniAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDE0007F2AED3E9C007911EF /* Stefanini */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE000A42AED3E9E007911EF /* Build configuration list for PBXNativeTarget "Stefanini" */;
+			buildPhases = (
+				EDE0007C2AED3E9C007911EF /* Sources */,
+				EDE0007D2AED3E9C007911EF /* Frameworks */,
+				EDE0007E2AED3E9C007911EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stefanini;
+			productName = StefaniniApp;
+			productReference = EDE000802AED3E9C007911EF /* Stefanini.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDE0008F2AED3E9E007911EF /* StefaniniTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE000A72AED3E9E007911EF /* Build configuration list for PBXNativeTarget "StefaniniTests" */;
+			buildPhases = (
+				EDE0008C2AED3E9E007911EF /* Sources */,
+				EDE0008D2AED3E9E007911EF /* Frameworks */,
+				EDE0008E2AED3E9E007911EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDE000922AED3E9E007911EF /* PBXTargetDependency */,
+			);
+			name = StefaniniTests;
+			productName = StefaniniAppTests;
+			productReference = EDE000902AED3E9E007911EF /* StefaniniTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDE000992AED3E9E007911EF /* StefaniniUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE000AA2AED3E9E007911EF /* Build configuration list for PBXNativeTarget "StefaniniUITests" */;
+			buildPhases = (
+				EDE000962AED3E9E007911EF /* Sources */,
+				EDE000972AED3E9E007911EF /* Frameworks */,
+				EDE000982AED3E9E007911EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDE0009C2AED3E9E007911EF /* PBXTargetDependency */,
+			);
+			name = StefaniniUITests;
+			productName = StefaniniAppUITests;
+			productReference = EDE0009A2AED3E9E007911EF /* StefaniniUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDE000782AED3E9C007911EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EDE0007F2AED3E9C007911EF = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					EDE0008F2AED3E9E007911EF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = EDE0007F2AED3E9C007911EF;
+					};
+					EDE000992AED3E9E007911EF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = EDE0007F2AED3E9C007911EF;
+					};
+				};
+			};
+			buildConfigurationList = EDE0007B2AED3E9C007911EF /* Build configuration list for PBXProject "Stefanini" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDE000772AED3E9C007911EF;
+			productRefGroup = EDE000812AED3E9C007911EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE0007F2AED3E9C007911EF /* Stefanini */,
+				EDE0008F2AED3E9E007911EF /* StefaniniTests */,
+				EDE000992AED3E9E007911EF /* StefaniniUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDE0007E2AED3E9C007911EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE0008B2AED3E9E007911EF /* Preview Assets.xcassets in Resources */,
+				EDE000882AED3E9E007911EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE0008E2AED3E9E007911EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE000982AED3E9E007911EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDE0007C2AED3E9C007911EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2708382AED53F200BA9680 /* APIManager.swift in Sources */,
+				ED27083E2AED547B00BA9680 /* GalleryViewController.swift in Sources */,
+				ED2708402AED54C800BA9680 /* GridView.swift in Sources */,
+				ED27083A2AED542900BA9680 /* GalleryViewModel.swift in Sources */,
+				ED2708362AED53E400BA9680 /* CatImage.swift in Sources */,
+				ED27083C2AED544D00BA9680 /* CatImageCell.swift in Sources */,
+				EDE000842AED3E9C007911EF /* StefaniniApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE0008C2AED3E9E007911EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE000952AED3E9E007911EF /* StefaniniAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE000962AED3E9E007911EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE000A12AED3E9E007911EF /* StefaniniAppUITestsLaunchTests.swift in Sources */,
+				EDE0009F2AED3E9E007911EF /* StefaniniAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDE000922AED3E9E007911EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDE0007F2AED3E9C007911EF /* Stefanini */;
+			targetProxy = EDE000912AED3E9E007911EF /* PBXContainerItemProxy */;
+		};
+		EDE0009C2AED3E9E007911EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDE0007F2AED3E9C007911EF /* Stefanini */;
+			targetProxy = EDE0009B2AED3E9E007911EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDE000A22AED3E9E007911EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDE000A32AED3E9E007911EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDE000A52AED3E9E007911EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StefaniniApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.fanbase.StefaniniApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDE000A62AED3E9E007911EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StefaniniApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.fanbase.StefaniniApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDE000A82AED3E9E007911EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 82M5R9Y24F;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 82M5R9Y24F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.fanbase.StefaniniAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stefanini.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stefanini";
+			};
+			name = Debug;
+		};
+		EDE000A92AED3E9E007911EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 82M5R9Y24F;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 82M5R9Y24F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.fanbase.StefaniniAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stefanini.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stefanini";
+			};
+			name = Release;
+		};
+		EDE000AB2AED3E9E007911EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 82M5R9Y24F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.fanbase.StefaniniAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StefaniniApp;
+			};
+			name = Debug;
+		};
+		EDE000AC2AED3E9E007911EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 82M5R9Y24F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.fanbase.StefaniniAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StefaniniApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDE0007B2AED3E9C007911EF /* Build configuration list for PBXProject "Stefanini" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE000A22AED3E9E007911EF /* Debug */,
+				EDE000A32AED3E9E007911EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE000A42AED3E9E007911EF /* Build configuration list for PBXNativeTarget "Stefanini" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE000A52AED3E9E007911EF /* Debug */,
+				EDE000A62AED3E9E007911EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE000A72AED3E9E007911EF /* Build configuration list for PBXNativeTarget "StefaniniTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE000A82AED3E9E007911EF /* Debug */,
+				EDE000A92AED3E9E007911EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE000AA2AED3E9E007911EF /* Build configuration list for PBXNativeTarget "StefaniniUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE000AB2AED3E9E007911EF /* Debug */,
+				EDE000AC2AED3E9E007911EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDE000782AED3E9C007911EF /* Project object */;
+}
