@@ -7,15 +7,6 @@
 
 import Foundation
 
-struct CatImage: Identifiable, Codable {
-    var id: String
-    var link: String
-}
-
-struct APIResponse: Codable {
-    var data: [CatImage]
-}
-
 struct ImgurResponse: Codable {
     let data: [ImgurData]
 }
@@ -28,4 +19,11 @@ struct ImgurData: Identifiable, Codable {
 struct ImageCats: Identifiable, Codable {
     let id: String
     let link: String
+    let type: TypeEnum
+}
+
+enum TypeEnum: String, Codable {
+    case imageJPEG = "image/jpeg"
+    case imagePNG = "image/png"
+    case videoMp4 = "video/mp4"
 }

@@ -28,26 +28,34 @@ class APIManager {
         request.addValue("Client-ID \(clientID)", forHTTPHeaderField: "Authorization")
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            if let error = error {
-                completion(nil, error)
-                return
+                
+                if let error = error {
+                    completion(nil, error)
+                    return
+                }
+                
+                guard let data = data else {
+                    completion(nil, NSError(domain: "", code: -2, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
+                    return
+                }
+                
+                // Decodificar la respuesta
+                do {
+                    // Suponiendo que la respuesta tiene un formato específico con un array en una clave "data".
+                    let response = try JSONDecoder().decode(ImgurResponse.self, from: data)
+                    
+                    // Filtrar los resultados para obtener solo las imágenes con tipo "image/jpeg"
+                    let filteredData = response.data.filter { imgurData in
+                        imgurData.images.contains { image in
+                            image.type == .imageJPEG
+                        } 
+                    }
+                    
+                    completion(filteredData, nil)
+                } catch {
+                    completion(nil, error)
+                }
             }
-
-            guard let data = data else {
-                completion(nil, NSError(domain: "", code: -2, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
-                return
-            }
-
-            // Decodificar la respuesta
-            do {
-                // Suponiendo que la respuesta tiene un formato específico con un array en una clave "data".
-                let response = try JSONDecoder().decode(ImgurResponse.self, from: data)
-                completion(response.data, nil)
-            } catch {
-                completion(nil, error)
-            }
-        }
-        task.resume()
+            task.resume()
     }
 }
