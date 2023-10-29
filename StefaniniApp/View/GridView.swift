@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GridView: View {
-    @Binding var catImages: [CatImage]
+    @Binding var catImages: [ImgurData]
 
     // Definir columnas para nuestra cuadrícula
     let columns = [
@@ -32,7 +32,7 @@ struct GridView: View {
     }
 }
 
-
+/*
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
         GridView(catImages: .constant(dummyCatImages))
@@ -91,3 +91,4 @@ struct GridView_Previews: PreviewProvider {
         CatImage(id: "50", link: "https://i.imgur.com/T7SGEv8.jpg"),
     ]
 }
+*/

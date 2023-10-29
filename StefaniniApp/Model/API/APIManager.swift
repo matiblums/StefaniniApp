@@ -11,12 +11,13 @@ class APIManager {
     
     static let shared = APIManager()
 
-    private let baseURL = "https://api.imgur.com/3/gallery/r/earthporn/image_id"
+    //private let baseURL = "https://api.imgur.com/3/gallery/r/cats/image_id"
+    private let baseURL = "https://api.imgur.com/3/gallery/search/?q=cat&q_type=jpg"
     private let clientID = "1ceddedc03a5d71"
 
     private init() {}  // Privatizar el inicializador para usar el patrón Singleton
     
-    func fetchCatImages(completion: @escaping ([CatImage]?, Error?) -> Void) {
+    func fetchCatImages(completion: @escaping ([ImgurData]?, Error?) -> Void) {
         
         guard let url = URL(string: baseURL) else {
             completion(nil, NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"]))
@@ -41,7 +42,7 @@ class APIManager {
             // Decodificar la respuesta
             do {
                 // Suponiendo que la respuesta tiene un formato específico con un array en una clave "data".
-                let response = try JSONDecoder().decode(APIResponse.self, from: data)
+                let response = try JSONDecoder().decode(ImgurResponse.self, from: data)
                 completion(response.data, nil)
             } catch {
                 completion(nil, error)
@@ -49,9 +50,4 @@ class APIManager {
         }
         task.resume()
     }
-}
-
-// Suponiendo una estructura de respuesta de la API como esta:
-struct APIResponse: Codable {
-    var data: [CatImage]
 }

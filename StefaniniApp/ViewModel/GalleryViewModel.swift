@@ -11,7 +11,7 @@ import SwiftUI
 
 class GalleryViewModel: ObservableObject {
 
-    @Published var catImages: [CatImage] = []
+    @Published var catImages: [ImgurData] = []
     @Published var error: String? = nil
 
     init() {

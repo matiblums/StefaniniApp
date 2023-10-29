@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatImageCell: View {
-    let catImage: CatImage
+    let catImage: ImgurData
 
     var body: some View {
         ZStack {
@@ -16,7 +16,7 @@ struct CatImageCell: View {
                 .frame(width: 80, height: 80) // Ajusta el tamaño del fondo según lo necesites
                 .cornerRadius(5)
                 .shadow(color: Color.gray.opacity(0.4), radius: 5, x: 0, y: 2)
-            AsyncImage(url: URL(string: catImage.link)) { phase in
+            AsyncImage(url: URL(string: catImage.images.first!.link)) { phase in
                 switch phase {
                 case .empty:
                     ProgressView()
@@ -43,9 +43,10 @@ struct CatImageCell: View {
 }
 
 
-
+/*
 struct CatImageCell_Previews: PreviewProvider {
     static var previews: some View {
         CatImageCell(catImage: CatImage(id: "2", link: "https://i.imgur.com/T7SGEv8.jpg"))
     }
 }
+*/
