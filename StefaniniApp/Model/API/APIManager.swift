@@ -11,11 +11,10 @@ class APIManager {
     
     static let shared = APIManager()
     
-    //private let baseURL = "https://api.imgur.com/3/gallery/r/cats/image_id"
-    private let baseURL = "https://api.imgur.com/3/gallery/search/?q=cat&q_type=jpg"
+    private let baseURL = "https://api.imgur.com/3/gallery/search/?q=cats"
     private let clientID = "1ceddedc03a5d71"
     
-    private init() {}  // Privatizar el inicializador para usar el patrón Singleton
+    private init() {} 
     
     func fetchCatImages(completion: @escaping ([ImgurData]?, Error?) -> Void) {
         
@@ -42,9 +41,8 @@ class APIManager {
             do {
                 let response = try JSONDecoder().decode(ImgurResponse.self, from: data)
                 
-                // Filtrar los resultados
                 let filteredData = response.data.compactMap { imgurData -> ImgurData? in
-                    guard let firstJPEGImage = imgurData.images.first(where: { $0.type == .imageJPEG }) else {
+                    guard let firstJPEGImage = imgurData.images?.first(where: { $0.type == .imageJPEG }) else {
                         return nil
                     }
                     return ImgurData(id: imgurData.id, images: [firstJPEGImage])

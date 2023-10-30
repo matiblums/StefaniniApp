@@ -13,7 +13,7 @@ struct ImgurResponse: Codable {
 
 struct ImgurData: Identifiable, Codable {
     let id: String
-    let images: [ImageCats]
+    let images: [ImageCats]?
 }
 
 struct ImageCats: Identifiable, Codable {
