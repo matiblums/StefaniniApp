@@ -10,11 +10,11 @@ import Foundation
 class APIManager {
     
     static let shared = APIManager()
-
+    
     //private let baseURL = "https://api.imgur.com/3/gallery/r/cats/image_id"
     private let baseURL = "https://api.imgur.com/3/gallery/search/?q=cat&q_type=jpg"
     private let clientID = "1ceddedc03a5d71"
-
+    
     private init() {}  // Privatizar el inicializador para usar el patrón Singleton
     
     func fetchCatImages(completion: @escaping ([ImgurData]?, Error?) -> Void) {
@@ -26,36 +26,35 @@ class APIManager {
         
         var request = URLRequest(url: url)
         request.addValue("Client-ID \(clientID)", forHTTPHeaderField: "Authorization")
-
+        
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                
-                if let error = error {
-                    completion(nil, error)
-                    return
-                }
-                
-                guard let data = data else {
-                    completion(nil, NSError(domain: "", code: -2, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
-                    return
-                }
-                
-                // Decodificar la respuesta
-                do {
-                    // Suponiendo que la respuesta tiene un formato específico con un array en una clave "data".
-                    let response = try JSONDecoder().decode(ImgurResponse.self, from: data)
-                    
-                    // Filtrar los resultados para obtener solo las imágenes con tipo "image/jpeg"
-                    let filteredData = response.data.filter { imgurData in
-                        imgurData.images.contains { image in
-                            image.type == .imageJPEG
-                        } 
-                    }
-                    
-                    completion(filteredData, nil)
-                } catch {
-                    completion(nil, error)
-                }
+            
+            if let error = error {
+                completion(nil, error)
+                return
             }
-            task.resume()
+            
+            guard let data = data else {
+                completion(nil, NSError(domain: "", code: -2, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
+                return
+            }
+            
+            do {
+                let response = try JSONDecoder().decode(ImgurResponse.self, from: data)
+                
+                // Filtrar los resultados
+                let filteredData = response.data.compactMap { imgurData -> ImgurData? in
+                    guard let firstJPEGImage = imgurData.images.first(where: { $0.type == .imageJPEG }) else {
+                        return nil
+                    }
+                    return ImgurData(id: imgurData.id, images: [firstJPEGImage])
+                }
+                
+                completion(filteredData, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+        task.resume()
     }
 }
