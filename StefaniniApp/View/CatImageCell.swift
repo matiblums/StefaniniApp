@@ -28,10 +28,14 @@ struct CatImageCell: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(maxWidth: 70, maxHeight: 70)
                     case .failure:
-                        Image("Account")
+                        Image(systemName: "xmark.circle")
+                            .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: 70, maxHeight: 70)
                     @unknown default:
-                        Image("Account")
+                        Image(systemName: "xmark.circle")
+                            .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: 70, maxHeight: 70)
                     }
                 }
@@ -43,7 +47,9 @@ struct CatImageCell: View {
                 )
             }
             else {
-                Image("Account")
+                Image(systemName: "xmark.circle")
+                    .resizable()
+                    .scaledToFit()
                     .frame(maxWidth: 70, maxHeight: 70)
             }
         }
@@ -54,7 +60,7 @@ struct CatImageCell_Previews: PreviewProvider {
     static var previews: some View {
         let sampleImage = ImageCats(id: "1", link: "https://i.imgur.com/OJWMJ4A.jpg", type: .imageJPEG)
         let sampleImgurData = ImgurData(id: "1", images: [sampleImage])
-
+        
         CatImageCell(catImage: sampleImgurData)
             .previewLayout(.sizeThatFits)
             .padding(10)
