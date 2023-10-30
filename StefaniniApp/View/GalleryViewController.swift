@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GalleryView: View {
     @ObservedObject var viewModel = GalleryViewModel()
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -24,6 +24,11 @@ struct GalleryView: View {
                 viewModel.fetchCatImages()
             }
             .navigationBarTitle("Gallery")
+            .navigationBarItems(trailing: Button(action: {
+                viewModel.fetchCatImages()
+            }) {
+                Image(systemName: "arrow.clockwise")
+            })
         }
     }
 }
