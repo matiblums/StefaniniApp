@@ -11,7 +11,7 @@ class APIManager {
     
     static let shared = APIManager()
     
-    private let baseURL = "https://api.imgur.com/3/gallery/search/?q=cats"
+    private let baseURL = "https://api.imgur.com/3/gallery/search/?q=cats&q_type=jpg"
     private let clientID = "1ceddedc03a5d71"
     
     private init() {} 
